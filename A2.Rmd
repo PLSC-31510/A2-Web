@@ -90,39 +90,22 @@ Using the documentation for `search_tweets` as a guide, try pulling the 2,000 mo
 # YOUR CODE HERE
 ```
 
-#### Challenge 2. 
+#### Challenge 2.
 
-Pick your favorite musical artist and collect the 1,000 most recent tweets they are mentioned in (either by their handle or plain text). What is the most frequently used hashtag in these tweets other than #artistname? 
+Of the 5 twitter-using IR profs, which one has the highest follower to friend ratio? 
 
-**HINT**: To simplify this challenge, exclude Tweets with more than one hashtag using:
-
-```{r eval = F}
-## Hint: Filter out tweets with multiple hashtags 
-## Don't try to run this code before defining "music_tweets"
-music_tweets %>%
- mutate(hashtags = as.character(hashtags)) %>%
- filter(!is.na(hashtags),
-        !str_detect(hashtags, "c\\("))
-```
+The IR profs handles are: @carsonaust, @profpaulpoast, @pstanpolitics, @rochelleterman, @bobbygulotty)
 
 ```{r}
 # YOUR CODE HERE
 ```
 
 
-#### Challenge 3.
+#### Challenge 3 (extra credit). 
 
-Run the code below to by pull the 1,000 most recent tweets from 5 UChicago faculty members:
+Pick your favorite musical artist and collect the 1,000 most recent tweets they are mentioned in (either by their handle or plain text). What is the most frequently used hashtag in these tweets other than #artistname? 
 
-```{r}
-profs1000 <- get_timeline(
-  user = c("carsonaust", "profpaulpoast", "pstanpolitics", 
-           "rochelleterman", "bobbygulotty"),
-  n = 1000
-)
-```
-
-Which professors in the `profs1000` data use their iPhone to tweet? What percentage of their total tweets were sent from their iPhone?
+**Hint**: Hashtags can be found in the nexted column `entities`
 
 ```{r}
 # YOUR CODE HERE
