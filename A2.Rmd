@@ -21,8 +21,6 @@ library(lubridate)
 library(rtweet)
 ```
 
-## Part 1: Webscraping
-
 In this week's lecture, we introduced some tools to collect pieces of data from individual presidential documents. For this assignment, we will be looking at __all__ documents in the database that contain the string "space exploration." Our goals in this problem set are:
 
 1. To scrape all documents returned from [this search query](https://www.presidency.ucsb.edu/advanced-search?field-keywords=%22space+exploration%22&field-keywords2=&field-keywords3=&from%5Bdate%5D=&to%5Bdate%5D=&person2=&items_per_page=100)
@@ -72,42 +70,3 @@ scrape_docs <- function(URL){
   return(all_info)
 }
 ```
-
-
-## Part 2: RTweet
-
-Work through the tutorial `2_Collecting/4_RTweet-Demo.Rmd`, which can be found in the main course materials. Below, enter your answers to the challenges.
-
-#### Challenge 1: Hashtag Challenge.
-
-Using the documentation for `search_tweets` as a guide, try pulling the 2,000 most recent tweets that include `#DukeEllington` OR `"Duke Ellington"` -- be sure to exclude retweets from the query.
-
-1. Why did your query not return 2,000 results?
-
-2. Identify the user that has used either the hashtag or the string in the greatest number of tweets -- where is this user from?
-
-```{r, message=FALSE}
-# YOUR CODE HERE
-```
-
-#### Challenge 2.
-
-Of the 5 twitter-using IR profs, which one has the highest follower to friend ratio? 
-
-The IR profs handles are: @carsonaust, @profpaulpoast, @pstanpolitics, @rochelleterman, @bobbygulotty)
-
-```{r}
-# YOUR CODE HERE
-```
-
-
-#### Challenge 3 (extra credit). 
-
-Pick your favorite musical artist and collect the 1,000 most recent tweets they are mentioned in (either by their handle or plain text). What is the most frequently used hashtag in these tweets other than #artistname? 
-
-**Hint**: Hashtags can be found in the nexted column `entities`
-
-```{r}
-# YOUR CODE HERE
-```
-
