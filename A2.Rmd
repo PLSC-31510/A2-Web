@@ -70,3 +70,12 @@ scrape_docs <- function(URL){
   return(all_info)
 }
 ```
+
+
+## Extra Credit
+
+You may have noticed that, although there were 380 total results, only 378 contained dates. This may have resulted in your final dataframe being only 378 rows (depending on how you completed the task).
+
+Find the two documents with missing dates and print their titles. Assign the dates for those documents as `NA`, so that the final product is a dataframe with 380 rows.
+
+NB: The file `data/space.csv` contains all 380 documents/rows.
